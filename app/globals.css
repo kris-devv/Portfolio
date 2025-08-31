@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #121212;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .navbar {
+    @apply flex flex-row gap-3 bg-[#282829] border-[#383838] border-1 border-t-0 border-r-0 rounded-bl-3xl rounded-tr-3xl p-4 text-center w-fit;
+  }
+  .navbar button{
+    @apply bg-transparent border-none px-4;
+  } 
+  .navbar button:hover{
+    @apply text-white/60;
+  } 
+
+  .left-section {
+    @apply bg-[#1E1E1F] border-[#383838] border-1 flex flex-col gap-3 text-white p-4 text-center w-80 rounded-3xl;
+  }
+  .right-section {
+    @apply bg-[#1E1E1F] border-[#383838] border-1 text-white pl-8 w-4xl rounded-3xl;
+  }
+
+  .left-block {
+    @apply flex flex-row gap-2 text-sm;
+  }
+  .left-block-img {
+    @apply w-15 h-15 border-1 border-[#383838] rounded-lg p-3;
+  }
+  .left-block-info {
+    @apply flex flex-col text-left my-auto;
+  }
+
+  .social-logo {
+    @apply w-6 h-6;
+  }
+
+  .divider {
+    @apply h-0.5 w-4/5 bg-[#383838] m-auto my-3;
+  }
+  .big-divider {
+    @apply h-2 w-1/12 bg-[#714CDF] rounded-full mb-6;
+  }
+
+  .content-title {
+    @apply text-5xl font-bold mb-4 mt-12;
+  }
+  .content-subtitle {
+    @apply text-4xl mb-3;
+  }
+  .content-text {
+    @apply text-base;
+  }
+
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
