@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ProjectCard from "../components/ProjectCard";
 
 export default function ProjectsFilter() {
   const [activeTab, setActiveTab] = useState("all");
@@ -8,27 +9,27 @@ export default function ProjectsFilter() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="bg-gray-800 text-white p-4 flex gap-4">
+      <nav className="projects-navbar">
         <button
-          className={`px-4 py-2 rounded ${activeTab === "all" ? "bg-gray-600" : "bg-gray-700"}`}
+          className={`px-4 py-2 rounded ${activeTab === "all" ? "text-[#714CDF]" : "text-white/80"}`}
           onClick={() => setActiveTab("all")}
         >
           All
         </button>
         <button
-          className={`px-4 py-2 rounded ${activeTab === "applications" ? "bg-gray-600" : "bg-gray-700"}`}
+          className={`px-4 py-2 rounded ${activeTab === "applications" ? "text-[#714CDF]" : "text-white/80"}`}
           onClick={() => setActiveTab("applications")}
         >
           Applications
         </button>
         <button
-          className={`px-4 py-2 rounded ${activeTab === "automations" ? "bg-gray-600" : "bg-gray-700"}`}
+          className={`px-4 py-2 rounded ${activeTab === "automations" ? "text-[#714CDF]" : "text-white/80"}`}
           onClick={() => setActiveTab("automations")}
         >
           Automations
         </button>
         <button
-          className={`px-4 py-2 rounded ${activeTab === "models" ? "bg-gray-600" : "bg-gray-700"}`}
+          className={`px-4 py-2 rounded ${activeTab === "models" ? "text-[#714CDF]" : "text-white/80"}`}
           onClick={() => setActiveTab("models")}
         >
           Models
@@ -37,8 +38,13 @@ export default function ProjectsFilter() {
 
       {/* Główna zawartość */}
       {activeTab === "all" && (
-          <div>
-            <p>Tutaj są wszystkie projekty...</p>
+          <div className="projects-grid">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
           </div>
         )}
 

@@ -31,20 +31,30 @@
   } 
 
   .left-section {
-    @apply bg-[#1E1E1F] border-[#383838] border-1 flex flex-col gap-3 text-white p-4 text-center w-80 rounded-3xl;
+    @apply flex flex-col gap-3 text-white p-4 text-center w-69 h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
   }
   .right-section {
-    @apply bg-[#1E1E1F] border-[#383838] border-1 text-white pl-8 w-4xl rounded-3xl;
+    @apply text-white px-8 w-4xl border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl mb-6;
+  }
+
+  .status {
+    @apply bg-[#282829] border-[#383838] border-1 rounded-xl text-xs w-fit px-3 py-1 m-auto;
   }
 
   .left-block {
-    @apply flex flex-row gap-2 text-sm;
+    @apply flex flex-row gap-2 text-sm ml-3;
   }
-  .left-block-img {
+  .left-block img{
     @apply w-15 h-15 border-1 border-[#383838] rounded-lg p-3;
   }
   .left-block-info {
-    @apply flex flex-col text-left my-auto;
+    @apply flex flex-col text-left my-auto overflow-hidden;
+  }
+  .left-block-info h3{
+    @apply text-white/60;
+  }
+  .left-block-info p{
+    @apply overflow-hidden text-ellipsis;
   }
 
   .social-logo {
@@ -52,22 +62,80 @@
   }
 
   .divider {
-    @apply h-0.5 w-4/5 bg-[#383838] m-auto my-3;
+    @apply h-[1px] w-4/5 bg-[#383838] m-auto my-3;
   }
   .big-divider {
     @apply h-2 w-1/12 bg-[#714CDF] rounded-full mb-6;
   }
 
   .content-title {
-    @apply text-5xl font-bold mb-4 mt-12;
+    @apply text-4xl font-bold mb-4 mt-12;
   }
   .content-subtitle {
-    @apply text-4xl mb-3;
+    @apply text-3xl font-bold mb-3;
   }
   .content-text {
     @apply text-base;
   }
 
+  .about-cards-grid {
+    @apply grid grid-cols-2 grid-rows-2 gap-4 mb-6;
+  }
+  .about-card {
+    @apply flex flex-row rounded-xl border-transparent bg-gradient-to-br from-[#282829] via-[#282829] to-[#1E1E1F] shadow-xl;
+  }
+  .about-card img{
+    @apply w-15 h-15 bg-transparent m-2 mb-10;
+  }
+  .about-card h2{
+    @apply text-xl font-bold;
+  }
+  .about-card p{
+    @apply text-white/60 text-sm;
+  }
+  .about-card div{
+    @apply mt-3;
+  }
+
+  .about-skills-layout {
+   @apply flex flex-row gap-3 flex-wrap justify-center mb-18; 
+  }
+  .about-skill {
+    @apply h-fit w-26 rounded-lg border-transparent bg-gradient-to-br from-[#282829] via-[#282829] to-[#1E1E1F] shadow-[1px_2px_3px_0px] shadow-[#714CDF];
+  }
+  .about-skill p{
+    @apply text-sm text-center m-auto p-1.5;
+  }
+
+  .projects-navbar {
+    @apply flex flex-row bg-transparent mb-6;
+  }
+  .projects-navbar button{
+    @apply bg-transparent border-none text-base;
+  }
+  .projects-navbar button:hover{
+    @apply text-white/60;
+  }
+
+  .projects-grid{
+    @apply grid grid-cols-3 gap-6 mb-18;
+  }
+  .project-card{
+    @apply flex flex-col rounded-xl border-transparent shadow-xl;
+  }
+  .project-card img{
+    @apply mb-3 h-40 w-full mx-auto bg-amber-50 rounded-xl;
+  }
+  .project-card h3{
+    @apply text-xl font-bold;
+  }
+  .project-card p{
+    @apply text-base text-white/60;
+  }
+
+  .download-cv{
+    @apply absolute bottom-8 right-8 bg-[#282829] text-[#714CDF] px-6 py-3 rounded-xl shadow-xl;
+  }
 }
 
 body {

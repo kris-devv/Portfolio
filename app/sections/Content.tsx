@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import ProjectsFilter from "./ProjectsFilter";
+import AboutCards from "./AboutCards";
+import SkillsSection from "./SkillsSection";
 
 export default function Content() {
   const [activeTab, setActiveTab] = useState("about");
@@ -43,7 +45,9 @@ export default function Content() {
             <div className="big-divider"></div>
             <p className="content-text mb-7">Siema jestem krystian...</p>
             <div className="content-subtitle">What I'm doing</div>
+            <AboutCards />
             <div className="content-subtitle">Skills</div>
+            <SkillsSection />
           </div>
         )}
 
@@ -52,6 +56,7 @@ export default function Content() {
             <h1 className="content-title">Resume</h1>
             <div className="big-divider"></div>
             <p className="content-text">To jest moje CV...</p>
+            <a href="" className="download-cv">Download CV</a>
           </div>
         )}
 
