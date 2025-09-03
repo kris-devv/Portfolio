@@ -1,1 +1,12 @@
 Template: https://aakashrajbanshi.com.np/
+
+
+- Dodaj opis w About
+- Dodaj icony do skills
+- Dodaj timeline do resume
+- Dodaj download cv aby pobierało cv
+- Dodaj projekty do projects
+- Dodaj sortowanie w projects
+
+
+- Dodaj możliwość zmiany języka na polski

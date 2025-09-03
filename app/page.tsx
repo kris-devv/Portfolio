@@ -12,21 +12,21 @@ export default function Home() {
         <div className="divider"></div>
 
         <div className="left-block">
-          <img src="/email.png" alt="email"/>
+          <img src="/icons/email.png" alt="email"/>
           <div className="left-block-info">
             <h3>EMAIL</h3>
             <p>krystian.figiela000@gmail.com</p>
           </div>
         </div>
         <div className="left-block">
-          <img src="/phone.png" alt="phone"/>
+          <img src="/icons/phone.png" alt="phone"/>
           <div className="left-block-info">
             <h3>PHONE</h3>
             <p>+48 696 273 167</p>
           </div>
         </div>
         <div className="left-block">
-          <img src="/location.png" alt="location"/>
+          <img src="/icons/location.png" alt="location"/>
           <div className="left-block-info">
             <h3>LOCATION</h3>
             <p>Rakszawa, Poland</p>
@@ -34,9 +34,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row gap-4 justify-center my-3">
-          <a href="https://www.linkedin.com/in/krystian-figiela/" target="_blank"><img src="/linkedin.png" alt="linkedin" className="social-logo"/></a>
-          <a href="https://github.com/kris-devv" target="_blank"><img src="/github.png" alt="github" className="social-logo"/></a>
-          <a href="https://www.instagram.com/kris.figiela/" target="_blank"><img src="/instagram.png" alt="instagram" className="social-logo"/></a>
+          <a href="https://www.linkedin.com/in/krystian-figiela/" target="_blank"><img src="/icons/linkedin.png" alt="linkedin" className="social-logo"/></a>
+          <a href="https://github.com/kris-devv" target="_blank"><img src="/icons/github.png" alt="github" className="social-logo"/></a>
+          <a href="https://www.instagram.com/kris.figiela/" target="_blank"><img src="/icons/instagram.png" alt="instagram" className="social-logo"/></a>
         </div>
       </section>
       <Content />

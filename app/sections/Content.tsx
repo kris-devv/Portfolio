@@ -52,10 +52,40 @@ export default function Content() {
         )}
 
         {activeTab === "resume" && (
-          <div>
+          <div className="resume-content">
             <h1 className="content-title">Resume</h1>
             <div className="big-divider"></div>
-            <p className="content-text">To jest moje CV...</p>
+            <h2>Education</h2>
+            <ol>
+              <li className="timeline-item">
+                <div className="timeline-item::before"></div>
+                <h3>ZST Leżajsk</h3>
+                <p>Kierunek Technik Informatyk. Certyfikat INF.02 i INF.03.</p>
+                <p>2020 - 2025</p>
+                <div className="timeline-item::after"></div>
+              </li>
+              <li className="timeline-item">
+                <h3>Rzeszów University of Technology</h3>
+                <p>Inżynieria i Analiza Danych.</p>
+                <p>2025 - teraz</p>
+                <div className="timeline-item::after"></div>
+              </li>
+            </ol>
+
+            <h2>Work Experience</h2>
+            <ol>
+              <li className="timeline-item">
+                <h3>MF-Comp</h3>
+                <p>Praktyki w serwisie komputerowym</p>
+                <p>2024 - teraz</p>
+              </li>
+              <li className="timeline-item">
+                <h3>BorgWarner</h3>
+                <p>Praca na produkcji</p>
+                <p>2024 - teraz</p>
+              </li>
+            </ol>
+            
             <a href="" className="download-cv">Download CV</a>
           </div>
         )}

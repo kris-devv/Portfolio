@@ -1,5 +1,5 @@
 export default function ProjectsFilter() {
-    const skills = [ "Python", "Git", "GitHub", "Linux", "Flutter", "PySide", "Flask"];
+    const skills = [ "Python", "Git", "GitHub", "Linux", "Flutter", "PySide", "Flask", "SQLite", "Pandas", "NumPy", "Excel"];
 
     return (
       <div className="about-skills-layout">
