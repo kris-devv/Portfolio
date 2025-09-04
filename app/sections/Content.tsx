@@ -52,41 +52,58 @@ export default function Content() {
         )}
 
         {activeTab === "resume" && (
+          <div>
           <div className="resume-content">
             <h1 className="content-title">Resume</h1>
             <div className="big-divider"></div>
-            <h2>Education</h2>
-            <ol>
+            <div className="flex flex-row">
+              <img src="/icons/graduation.png" alt="education" />
+              <h2>Education</h2>
+            </div>
+            <ol className="relative mb-8">
               <li className="timeline-item">
-                <div className="timeline-item::before"></div>
-                <h3>ZST Leżajsk</h3>
+                <div>
+                  <div className="circle"></div>
+                  <h3>ZST Leżajsk</h3>
+                </div>
                 <p>Kierunek Technik Informatyk. Certyfikat INF.02 i INF.03.</p>
-                <p>2020 - 2025</p>
-                <div className="timeline-item::after"></div>
+                <span>2020 - 2025</span>
               </li>
               <li className="timeline-item">
-                <h3>Rzeszów University of Technology</h3>
+              <div>
+                  <div className="circle"></div>
+                  <h3>Rzeszów University of Technology</h3>
+                </div>
                 <p>Inżynieria i Analiza Danych.</p>
-                <p>2025 - teraz</p>
-                <div className="timeline-item::after"></div>
+                <span>2025 - teraz</span>
               </li>
             </ol>
 
-            <h2>Work Experience</h2>
-            <ol>
+            <div className="flex flex-row">
+              <img src="/icons/graduation.png" alt="education" />
+              <h2>Work Experience</h2>
+            </div>
+            <ol className="relative">
               <li className="timeline-item">
-                <h3>MF-Comp</h3>
+              <div>
+                  <div className="circle"></div>
+                  <h3>MF-Comp</h3>
+                </div>
                 <p>Praktyki w serwisie komputerowym</p>
-                <p>2024 - teraz</p>
+                <span>2024 - teraz</span>
               </li>
               <li className="timeline-item">
-                <h3>BorgWarner</h3>
+              <div>
+                  <div className="circle"></div>
+                  <h3>BorgWarner</h3>
+                </div>
                 <p>Praca na produkcji</p>
-                <p>2024 - teraz</p>
+                <span>2024 - teraz</span>
               </li>
             </ol>
-            
-            <a href="" className="download-cv">Download CV</a>
+          </div>
+
+          <a href="files/krystian_figiela_cv.pdf" className="download-cv" download>Download CV</a>
           </div>
         )}
 
@@ -102,7 +119,7 @@ export default function Content() {
           <div>
             <h1 className="content-title">Contact</h1>
             <div className="big-divider"></div>
-            <p className="content-text">Tu są moje dane kontaktowe...</p>
+            <p className="content-text">You can contact me at krystian.figiela000@gmail.com</p>
           </div>
         )}
     </div>

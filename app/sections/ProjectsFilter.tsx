@@ -6,6 +6,11 @@ import ProjectCard from "../components/ProjectCard";
 export default function ProjectsFilter() {
   const [activeTab, setActiveTab] = useState("all");
 
+  const projects = [
+    ["BlueVest", "Application", "/projects/bluevest.jpg", "https://github.com/kris-devv/BlueVest"],
+    ["Order Manager", "Application", "/projects/mfcomp.jpg", "https://github.com/kris-devv/order_manager1"],
+  ]
+
   return (
     <div>
       {/* Navbar */}
@@ -39,12 +44,15 @@ export default function ProjectsFilter() {
       {/* Główna zawartość */}
       {activeTab === "all" && (
           <div className="projects-grid">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {projects.map((project) => (
+              <ProjectCard
+                key={project[0]}
+                title={project[0]}
+                description={project[1]}
+                image={project[2]}
+                url={project[3]}
+              />
+            ))}
           </div>
         )}
 

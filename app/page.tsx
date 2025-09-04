@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Content from "./sections/Content";
 
+export const metadata = {
+  title: "Krystian Figiela",
+  description: "Portfolio of Krystian Figiela",
+}
+
 export default function Home() {
   return (
     <div className="flex gap-6 pt-24 justify-center">

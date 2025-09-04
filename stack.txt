@@ -1,12 +1,16 @@
 Template: https://aakashrajbanshi.com.np/
 
+- Responzywność strony (na telefony)
+- Klikanie emaila, telefonu i lokacji
+- 
 
 - Dodaj opis w About
-- Dodaj icony do skills
-- Dodaj timeline do resume
-- Dodaj download cv aby pobierało cv
-- Dodaj projekty do projects
+- Dodaj więcej skills
 - Dodaj sortowanie w projects
 
 
 - Dodaj możliwość zmiany języka na polski
+- Dodaj formularz kontaktowy
+- Dodaj otwieranie szczegółów projektu
+
+- BUG: Gdy wejde w resume to nie działa navbar

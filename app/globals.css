@@ -101,24 +101,46 @@
    @apply flex flex-row gap-3 flex-wrap justify-center mb-18; 
   }
   .about-skill {
-    @apply h-fit w-26 rounded-lg border-transparent bg-gradient-to-br from-[#282829] via-[#282829] to-[#1E1E1F] shadow-[1px_2px_3px_0px] shadow-[#714CDF];
+    @apply flex flex-row h-fit w-fit rounded-lg border-transparent bg-gradient-to-br from-[#282829] via-[#282829] to-[#1E1E1F] shadow-[1px_2px_3px_0px] shadow-[#714CDF];
+  }
+  .about-skill img{
+    @apply w-5 h-5 m-2;
   }
   .about-skill p{
-    @apply text-sm text-center m-auto p-1.5;
+    @apply text-sm text-center my-auto mr-3;
   }
 
   .resume-content {
-    @apply flex flex-col gap-3 mb-16;
+    @apply flex flex-col mb-16 relative;
   }
   .resume-content h2{
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold ml-11 mb-4 mt-2;
   }
-  .resume-content h3{
-    @apply text-base font-bold;
+  .resume-content img{
+    @apply w-12 h-12 absolute -left-4.5 border-1 rounded-xl p-2 border-transparent bg-gradient-to-br from-[#282829] via-[#282829] to-[#1E1E1F] shadow-xl;
   }
-  .resume-content p{
-    @apply text-white/60;
+    
+
+  .timeline-item{
+    @apply flex flex-col;
   }
+  .timeline-item h3{
+    @apply text-base font-bold ml-11;
+  }
+  .circle{
+    @apply absolute -left-0.75 w-4 h-4 mt-1 rounded-full border-4 border-[#353536] bg-[#714CDF] z-1;
+  }
+  .timeline-item p{
+    @apply text-white/60 ml-11;
+  }
+  .timeline-item span{
+    @apply text-[#714CDF] ml-11 mb-3;
+  }
+  .timeline-item::before {
+    @apply content-[""] absolute h-full w-0.25 bg-[#353536] -top-2 ml-1;
+  }
+
+
 
   .projects-navbar {
     @apply flex flex-row bg-transparent mb-6;
@@ -136,8 +158,23 @@
   .project-card{
     @apply flex flex-col rounded-xl border-transparent shadow-xl;
   }
+  .project-card a{
+    @apply relative inline-block overflow-hidden;
+  }
   .project-card img{
-    @apply mb-3 h-40 w-full mx-auto bg-amber-50 rounded-xl;
+    @apply mb-3 h-40 w-full mx-auto bg-amber-50 rounded-xl block transition ease-in-out duration-[0.4s] transform;
+  }
+  .project-card-overlay{
+    @apply absolute top-0 left-0 w-full h-full opacity-0 flex justify-center items-center transition ease-in-out duration-[0.4s] bg-[#282829]/20;
+  }
+  .project-card-overlay img{
+    @apply w-10 h-10 bg-white border-none rounded-md;
+  }
+  .project-card a:hover{
+    @apply brightness-75 transform scale-105;
+  }
+  .project-card a:hover .project-card-overlay{
+    @apply opacity-100;
   }
   .project-card h3{
     @apply text-xl font-bold;
