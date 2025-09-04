@@ -13,7 +13,7 @@ export default function ProjectCard({ title, description, image, url }: ProjectC
     
     return (
       <div className="project-card">
-        <a href={url}>
+        <a href={url} target="_blank">
           <img src={image} alt={title} />
           <div className="project-card-overlay">
             <img src="/icons/view.png" alt="view" />

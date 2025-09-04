@@ -9,6 +9,7 @@ export default function Content() {
   const [activeTab, setActiveTab] = useState("about");
 
   return (
+    <div>
     <div className="right-section relative">
       {/* Navbar */}
       <nav className="navbar absolute right-0">
@@ -122,6 +123,34 @@ export default function Content() {
             <p className="content-text">You can contact me at krystian.figiela000@gmail.com</p>
           </div>
         )}
+    </div>
+
+    <nav className="navbar-mobile">
+        <button
+          className={`${activeTab === "about" ? "text-[#714CDF]" : "text-white"}`}
+          onClick={() => setActiveTab("about")}
+        >
+          About
+        </button>
+        <button
+          className={`${activeTab === "resume" ? "text-[#714CDF]" : "text-white"}`}
+          onClick={() => setActiveTab("resume")}
+        >
+          Resume
+        </button>
+        <button
+          className={`${activeTab === "projects" ? "text-[#714CDF]" : "text-white"}`}
+          onClick={() => setActiveTab("projects")}
+        >
+          Projects
+        </button>
+        <button
+          className={`${activeTab === "contact" ? "text-[#714CDF]" : "text-white"}`}
+          onClick={() => setActiveTab("contact")}
+        >
+          Contact
+        </button>
+      </nav>
     </div>
   );
 }

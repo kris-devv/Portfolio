@@ -7,9 +7,25 @@ export default function ProjectsFilter() {
   const [activeTab, setActiveTab] = useState("all");
 
   const projects = [
-    ["BlueVest", "Application", "/projects/bluevest.jpg", "https://github.com/kris-devv/BlueVest"],
-    ["Order Manager", "Application", "/projects/mfcomp.jpg", "https://github.com/kris-devv/order_manager1"],
-  ]
+    { 
+      title: "BlueVest", 
+      type: "Application", 
+      image: "/projects/bluevest.jpg", 
+      url: "https://github.com/kris-devv/BlueVest",
+      tags: ["applications"]
+    },
+    { 
+      title: "Order Manager", 
+      type: "Application", 
+      image: "/projects/mfcomp.jpg", 
+      url: "https://github.com/kris-devv/order_manager1",
+      tags: ["applications"]
+    },
+  ];
+
+  const filteredProjects = activeTab === "all" 
+    ? projects 
+    : projects.filter(project => project.tags.includes(activeTab));
 
   return (
     <div>
@@ -41,38 +57,18 @@ export default function ProjectsFilter() {
         </button>
       </nav>
 
-      {/* Główna zawartość */}
-      {activeTab === "all" && (
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project[0]}
-                title={project[0]}
-                description={project[1]}
-                image={project[2]}
-                url={project[3]}
-              />
-            ))}
-          </div>
-        )}
-
-        {activeTab === "applications" && (
-          <div>
-            <p>Tutaj są tylko aplikacje...</p>
-          </div>
-        )}
-
-        {activeTab === "automations" && (
-          <div>
-            <p>Tutaj są tylko automacje...</p>
-          </div>
-        )}
-
-        {activeTab === "models" && (
-          <div>
-            <p>Tutaj są tylko modele...</p>
-          </div>
-        )}
+      {/* Main content */}
+      <div className="projects-grid">
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            description={project.type}
+            image={project.image}
+            url={project.url}
+          />
+        ))}
+      </div>
     </div>
   );
 }

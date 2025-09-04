@@ -21,7 +21,7 @@
 
 @layer utilities {
   .navbar {
-    @apply flex flex-row gap-3 bg-[#282829] border-[#383838] border-1 border-t-0 border-r-0 rounded-bl-3xl rounded-tr-3xl p-4 text-center w-fit;
+    @apply hidden xl:flex flex-row gap-3 bg-[#282829] border-[#383838] border-1 border-t-0 border-r-0 rounded-bl-3xl rounded-tr-3xl p-4 text-center w-fit;
   }
   .navbar button{
     @apply bg-transparent border-none px-4;
@@ -30,22 +30,48 @@
     @apply text-white/60;
   } 
 
+  .navbar-mobile {
+    @apply xl:hidden fixed w-full left-0 bottom-0 flex flex-row justify-center bg-[#282829] border-[#383838] opacity-97 border-1 rounded-tl-3xl rounded-tr-3xl text-center shadow-2xl;
+  }
+  .navbar-mobile button{
+    @apply bg-transparent border-none px-6 py-5;
+  } 
+  .navbar-mobile button:hover{
+    @apply text-white/60;
+  } 
+
+  .show-contact {
+    @apply absolute right-0 top-0 text-[#714CDF] bg-[#282829] px-6 py-3 rounded-bl-3xl rounded-tr-3xl w-fit shadow-xl;
+  }
+
   .left-section_desktop {
     @apply hidden xl:flex flex-col gap-3 text-white p-4 text-center w-69 h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
   }
   .left-section_mobile {
-    @apply flex xl:hidden flex-row text-white w-4xl h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
+    @apply flex xl:hidden flex-col text-white w-4xl h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
   }
   .right-section {
     @apply text-white px-8 w-4xl border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl mb-6;
   }
 
   .status {
-    @apply bg-[#282829] border-[#383838] border-1 rounded-xl text-xs w-fit px-3 py-1 m-auto;
+    @apply bg-[#282829] border-[#383838] border-1 rounded-xl text-xs w-fit px-4 py-1.5 m-auto relative overflow-hidden;
+  }
+  .status::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-[#714CDF]/10 to-transparent;
+    transform: translateX(-100%);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .left-block {
-    @apply flex flex-row gap-2 text-sm ml-3;
+    @apply flex flex-row gap-2 w-2/5 text-sm ml-8 mb-6 xl:mb-0 xl:ml-3 xl:w-fit;
   }
   .left-block img{
     @apply w-15 h-15 border-1 border-[#383838] rounded-lg p-3;
@@ -65,7 +91,7 @@
   }
 
   .divider {
-    @apply h-[1px] w-4/5 bg-[#383838] m-auto my-3;
+    @apply h-[1px] w-[calc(100%-64px)] bg-[#383838] m-auto my-3 mb-6 xl:w-4/5;
   }
   .big-divider {
     @apply h-2 w-1/12 bg-[#714CDF] rounded-full mb-6;
@@ -188,6 +214,92 @@
 
   .download-cv{
     @apply absolute bottom-8 right-8 bg-[#282829] text-[#714CDF] px-6 py-3 rounded-xl shadow-xl;
+  }
+
+  /* Styl dla kontenera umiejętności */
+  .skills-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+
+  .skills-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  /* Animacja przesuwania umiejętności */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Styl dla pojedynczej umiejętności */
+  .about-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .about-skill:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .about-skill img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+
+  .about-skill p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+  }
+
+  /* Efekt przyciemnienia na krawędziach umiejętności */
+  .skills-container {
+    position: relative;
+  }
+
+  .skills-container::before,
+  .skills-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .skills-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color), transparent);
+  }
+
+  .skills-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+  }
+
+  /* Dla ciemnego motywu */
+  :root {
+    --bg-color: #1a1a1a; /* Dostosuj kolor tła do swojego motywu */
   }
 }
 

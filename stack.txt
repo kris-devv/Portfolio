@@ -1,13 +1,9 @@
 Template: https://aakashrajbanshi.com.np/
 
 - Responzywność strony (na telefony)
-- Klikanie emaila, telefonu i lokacji
-- 
 
 - Dodaj opis w About
-- Dodaj więcej skills
 - Dodaj sortowanie w projects
-
 
 - Dodaj możliwość zmiany języka na polski
 - Dodaj formularz kontaktowy
