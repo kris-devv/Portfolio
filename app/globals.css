@@ -30,8 +30,11 @@
     @apply text-white/60;
   } 
 
-  .left-section {
-    @apply flex flex-col gap-3 text-white p-4 text-center w-69 h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
+  .left-section_desktop {
+    @apply hidden xl:flex flex-col gap-3 text-white p-4 text-center w-69 h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
+  }
+  .left-section_mobile {
+    @apply flex xl:hidden flex-row text-white w-4xl h-fit border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl;
   }
   .right-section {
     @apply text-white px-8 w-4xl border-1 border-[#383838] rounded-3xl bg-[#1E1E1F] shadow-2xl mb-6;
